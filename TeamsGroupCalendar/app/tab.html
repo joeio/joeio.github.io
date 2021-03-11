@@ -157,8 +157,10 @@ html, body {
                 $('#ProgresLoader').show();
                 let Token = await Authuser(teamscontext.upn, appConfig);
                 let GroupMembers = await GetGroupMembers(Token, teamscontext);
+                console.log("GroupMembers: "+GroupMembers);
                 var displayNameMap = {};
                 let Schedules = await GetSchedule(Token, GroupMembers, displayNameMap);
+                console.log("Schedules: "+Schedules);
                 let Legend = buildLegend(displayNameMap);
                 $('#calendar-legend').append(Legend);
                 let Events = buildScheduleTable(Schedules, displayNameMap);
