@@ -53,7 +53,7 @@ const GetSchedule = (idToken, GroupMembers, displayNameMap) => {
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                url: ("https://graph.microsoft.com/beta/me/calendar/getSchedule"),
+                url: ("https://graph.microsoft.com/v1.0/me/calendar/getSchedule"),
                 dataType: 'json',
                 data: schRequest,
                 headers: {
